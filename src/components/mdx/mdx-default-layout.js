@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../style/reset.css';
 
 export default ({ children }) => (
     <div>
