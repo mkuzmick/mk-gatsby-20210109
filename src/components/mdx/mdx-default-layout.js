@@ -1,9 +1,10 @@
-import React from 'react';
-import '../../style/reset.css';
+/** @jsx jsx */
+import { jsx, ThemeProvider } from 'theme-ui'
+import theme from './theme'
+import components from './components'
 
-export default ({ children }) => (
-    <div>
-      <h1>MDX Layout</h1>
-      <div>{children}</div>
-    </div>
-  )
+export default props => (
+  <ThemeProvider theme={theme} components={components}>
+    {props.children}
+  </ThemeProvider>
+)

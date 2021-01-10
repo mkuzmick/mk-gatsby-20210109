@@ -1,16 +1,30 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import Image from "../components/image";
+import SEO from "../components/seo";
 
-const SecondPage = () => (
+const IndexPage = () => (
   <Layout>
-    <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <SEO
+      title="Home"
+      keywords={[`gatsby`, `application`, `react`]}
+    />
+    <h1
+      css={{
+        fontFamily: 'Fantasy'
+      }}
+    >Hi people</h1>
+    <p>Welcome to your new Gatsby site.</p>
+    <p>Now go build something great.</p>
+    <div
+      css={{ maxWidth: `300px`, marginBottom: `1.45rem` }}
+    >
+      <Image />
+    </div>
+    <Link to="/page-2/">Go to page 2</Link>
   </Layout>
-)
+);
 
-export default SecondPage
+export default IndexPage;
